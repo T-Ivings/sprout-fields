@@ -30,22 +30,22 @@ class Notes extends Field
     /**
      * @var string
      */
-    public $notes;
+    public string $notes;
 
     /**
      * @var string
      */
-    public $style;
+    public string $style;
 
     /**
      * @var bool
      */
-    public $hideLabel;
+    public bool $hideLabel;
 
     /**
      * @var string
      */
-    public $output;
+    public bool $output;
 
     public static function displayName(): string
     {
@@ -69,7 +69,7 @@ class Notes extends Field
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml() : void
     {
         $view = Craft::$app->getView();
         $view->registerAssetBundle(QuillAsset::class);
@@ -143,7 +143,7 @@ class Notes extends Field
      * @return bool|string
      * @throws Exception
      */
-    private function _getConfig(string $dir = 'sproutnotes')
+    private function _getConfig(string $dir = 'sproutnotes') : ?string
     {
         $file = $this->style;
         // Return our default css

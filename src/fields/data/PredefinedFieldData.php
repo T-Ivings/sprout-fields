@@ -19,28 +19,28 @@ class PredefinedFieldData
      *
      * @var string
      */
-    public $fieldFormat;
+    public string $fieldFormat;
 
     /**
      * The rendered value of the Predefined Field. This value is created when an Element is saved.
      *
      * @var string
      */
-    public $value;
+    public string $value;
 
     /**
      * The Element that will be used to render the Predefined Field
      *
      * @var ElementInterface
      */
-    private $element;
+    private ElementInterface $element;
 
     /**
      * Returns the value processed when the Predefined Field was saved by default
      *
      * @return string
      */
-    public function __toString()
+    public function __toString() : ?string
     {
         return $this->value ?? '';
     }
@@ -50,7 +50,7 @@ class PredefinedFieldData
      *
      * @param ElementInterface|null $element
      */
-    public function setElement(ElementInterface $element = null)
+    public function setElement(ElementInterface|null $element = null)
     {
         // Only set the Element once
         if (!$this->element) {
@@ -69,7 +69,7 @@ class PredefinedFieldData
      * @throws Throwable
      * @throws Exception
      */
-    public function getHtml()
+    public function getHtml() : mixed
     {
         return Craft::$app->view->renderObjectTemplate($this->fieldFormat, $this->element);
     }

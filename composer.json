@@ -1,7 +1,7 @@
 {
     "name": "barrelstrength/sprout-fields",
     "description": "International, Craft-friendly field types.",
-    "version": "3.8.6",
+    "version": "4.0.0",
     "type": "craft-plugin",
     "keywords": [
         "craft",
@@ -40,5 +40,11 @@
         "developer": "Barrel Strength",
         "documentationUrl": "https://sprout.barrelstrengthdesign.com/docs/fields",
         "class": "barrelstrength\\sproutfields\\SproutFields"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
