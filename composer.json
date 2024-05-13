@@ -24,10 +24,20 @@
         "docs": "https://sprout.barrelstrengthdesign.com/docs/fields",
         "rss": "https://github.com/barrelstrength/sprout-fields/commits/v2.atom"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "custom-plugins/sprout-base"
+        },
+        {
+        "type": "path",
+        "url": "custom-plugins/sprout-base-fields"
+        }
+    ],
     "require": {
         "craftcms/cms": "^4.0.0",
-        "barrelstrength/sprout-base": "^6.0.0",
-        "barrelstrength/sprout-base-fields": "^1.4.6",
+        "barrelstrength/sprout-base": "@dev",
+        "barrelstrength/sprout-base-fields": "@dev",
         "craftcms/craft": "^4.0.0"
     },
     "autoload": {
