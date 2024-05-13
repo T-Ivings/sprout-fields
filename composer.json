@@ -36,8 +36,8 @@
     ],
     "require": {
         "craftcms/cms": "^4.0.0",
-        "barrelstrength/sprout-base": "@dev",
-        "barrelstrength/sprout-base-fields": "@dev",
+        "barrelstrength/sprout-base": "6.1",
+        "barrelstrength/sprout-base-fields": "1.5",
         "craftcms/craft": "^4.0.0"
     },
     "autoload": {
