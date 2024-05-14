@@ -69,7 +69,7 @@ class Notes extends Field
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function getSettingsHtml() : void
+    public function getSettingsHtml() : string
     {
         $view = Craft::$app->getView();
         $view->registerAssetBundle(QuillAsset::class);

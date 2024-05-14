@@ -36,19 +36,19 @@ class SproutFields extends Plugin implements SproutDependencyInterface
     /**
      * @var string
      */
-    public $schemaVersion = '3.5.3';
+    public string $schemaVersion = '4.0.0';
 
     /**
      * @var string
      */
-    public $minVersionRequired = '2.1.3';
+    public string $minVersionRequired = '2.1.3';
 
     /**
      * @inheritdoc
      * @deprecated - Remove in v4.0
      * This empty method is required to avoid an error related to the Project Config when migrating from Craft 2 to Craft 3
      */
-    public function setSettings(array $settings)
+    public function setSettings(array $settings): void
     {
     }
 
@@ -56,12 +56,12 @@ class SproutFields extends Plugin implements SproutDependencyInterface
      * @inheritdoc
      * @deprecated - Remove in v4.0
      */
-    public function getSettings()
+    public function getSettings(): null
     {
         return null;
     }
 
-    public function init()
+    public function init(): void
     {
         parent::init();
 
